@@ -7,7 +7,7 @@ pipeline{
         
         stage('git checkout'){
             steps{
-                git branch: 'main', url: 'https://github.com/vikash-kumar01/terraform_lab.git'
+                git branch: 'main', url: 'https://github.com/Wassi123/terra-jen-pra.git'
             }
         }
         stage('terraform init'){
@@ -17,17 +17,17 @@ pipeline{
         }
          stage('terraform plan'){
             steps{
-                sh "terraform plan -var 'region=${params.region}'"
+                sh "terraform plan"
             }
         }
          stage('terraform apply'){
             steps{
-                 sh "terraform apply -var 'region=${params.region}' --auto-approve"
+                 sh "terraform apply --auto-approve"
             }
         }
         stage('terraform destroy'){
             steps{
-              sh "terraform destroy -var 'region=${params.region}' --auto-approve"
+              sh "terraform destroy --auto-approve"
             }
         }
     }
