@@ -7,7 +7,7 @@ pipeline{
         
         stage('git checkout'){
             steps{
-                git branch: 'main', url: 'https://github.com/Wassi123/terra-jen-pra.git'
+                git branch: 'master', url: 'https://github.com/Wassi123/terra-jen-pra.git'
             }
         }
         stage('terraform init'){
