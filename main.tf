@@ -7,7 +7,7 @@ provider "aws" {
 
 
 resource "aws_s3_bucket" "acl" {
-  bucket = "my-terra-111111111111"
+  bucket = "my-terra-11111111111167872891"
   acl    = "private"
 
   tags = {
