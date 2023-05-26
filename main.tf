@@ -6,12 +6,12 @@ provider "aws" {
 }
 
 
-resource "aws_s3_bucket_acl" "b" {
+resource "aws_s3_bucket_acl" "" {
   bucket = "my-terra-11111111111167872891"
   acl    = "private"
 
   tags = {
-    Name        = "My bucket"
+    Name        = "My_bucket"
     Environment = "Dev"
   }
 }
