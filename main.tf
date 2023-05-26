@@ -1,4 +1,5 @@
 provider "aws" {
+  profile = "myaws"
   region  = "var.region"
   access_key = "AKIAYKZCGGBFQQVHYWZL"
   secret_key = "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"
@@ -8,7 +9,7 @@ provider "aws" {
 
 resource "aws_s3_bucket" "b" {
   bucket = "my-terra-111111111111"
-  aws_s3_bucket_acl    = "private"
+  acl    = "private"
 
   tags = {
     Name        = "My bucket"
