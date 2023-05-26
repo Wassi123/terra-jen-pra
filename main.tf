@@ -6,7 +6,7 @@ provider "aws" {
 }
 
 
-resource "aws_s3_bucket" "b" {
+resource "aws_s3_bucket" "acl" {
   bucket = "my-terra-111111111111"
   acl    = "private"
 
