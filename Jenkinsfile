@@ -1,8 +1,6 @@
 properties([parameters([choice(choices: ['us-east-2', 'us-east-1', 'us-west-1'], description: 'Select in which region you want to deploy the resource ??', name: 'region')])])
 pipeline{
-    
     agent any 
-    
     stages{
         
         stage('git checkout'){
