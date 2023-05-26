@@ -1,5 +1,6 @@
 provider "aws" {
-  region  = "us-east-2"
+  profile = "myaws"
+  region  = "var.region"
   access_key = "AKIAYKZCGGBFQQVHYWZL"
   secret_key = "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"
 
@@ -14,5 +15,8 @@ resource "aws_s3_bucket" "b" {
     Name        = "My bucket"
     Environment = "Dev"
   }
+}
+
+variable "region" {
 }
 
